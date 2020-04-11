@@ -8,7 +8,7 @@ before_install:
 script:
     - docker run northcypress/react-test npm test -- --coverage
 
-after_install:
+after_success:
     - docker build -t northcypress/multi-client ./client
     - docker build -t northcypress/multi-server ./server
     - docker build -t northcypress/multi-worker ./worker
