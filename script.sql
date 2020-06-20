@@ -1,0 +1,1 @@
+CREATE TABLE values (number int);

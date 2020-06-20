@@ -1,0 +1,3 @@
+FROM postgres:latest
+COPY ./data /var/lib/postgresql/data 
+COPY ./script.sql /docker-entrypoint-initdb.d/script.sql
