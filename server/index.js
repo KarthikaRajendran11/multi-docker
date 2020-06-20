@@ -20,6 +20,7 @@ const pgClient = new Pool({
 });
 
 pgClient.on('connect', () => {
+  console.log("Connect signal received");
   pgClient
     .query('CREATE TABLE IF NOT EXISTS values (number INT)')
     .catch((err) => console.log(err));
@@ -54,7 +55,7 @@ app.get('/values/current', async (req, res) => {
 
 app.post('/values', async (req, res) => {
   const index = req.body.index;
-
+  console.log(`value : ${index}`);
   if (parseInt(index) > 40) {
     return res.status(422).send('Index too high');
   }
