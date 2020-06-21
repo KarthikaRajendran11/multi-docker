@@ -3,18 +3,18 @@ services:
     - docker
 
 before_install:
-    - docker build -t KarthikaRajendran11/react-test -f ./client/Dockerfile.dev ./client
+    - docker build -t northcypress/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-    - docker run KarthikaRajendran11/react-test npm test -- --coverage
+    - docker run northcypress/react-test npm test -- --coverage
 
 after_success:
-    - docker build -t KarthikaRajendran11/multi-client ./client
-    - docker build -t KarthikaRajendran11/multi-server ./server
-    - docker build -t KarthikaRajendran11/multi-nginx ./nginx
-    - docker build -t KarthikaRajendran11/multi-worker ./worker
+    - docker build -t northcypress/multi-client ./client
+    - docker build -t northcypress/multi-server ./server
+    - docker build -t northcypress/multi-nginx ./nginx
+    - docker build -t northcypress/multi-worker ./worker
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --passwod-stdin
-    - docker push KarthikaRajendran11/multi-client
-    - docker push KarthikaRajendran11/multi-server
-    - docker push KarthikaRajendran11/multi-nginx
-    - docker push KarthikaRajendran11/multi-worker
+    - docker push northcypress/multi-client
+    - docker push northcypress/multi-server
+    - docker push northcypress/multi-nginx
+    - docker push northcypress/multi-worker

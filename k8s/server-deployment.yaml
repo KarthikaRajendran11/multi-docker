@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: server
-          image: KarthikaRajendran11/multi-server
+          image: northcypress/multi-server
           ports:
             - containerPort: 5000
           env:
