@@ -1,6 +1,5 @@
-## multi-docker
 
-Fibonacci Caluculator:
+## Fibonacci Caluculator:
 
 This project was made as a part learning exercise for docker and kubernetes. It uses a redis cache and postgres DB for 
 storing computed result for the current value entred via client and storing previously computed values respectively.
