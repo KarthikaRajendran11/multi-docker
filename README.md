@@ -1,4 +1,4 @@
-# multi-docker
+## multi-docker
 
 Fibonacci Caluculator:
 
@@ -15,12 +15,12 @@ to redis cache.
 Upon refreshing the page, client issues a call to `/values/current` API, which fetches the result from redis cache and displays i
 it.
 
-## To run via docker : 
+# To run via docker : 
 
 - Clone project
 - Run `docker-compose up --build`
 
-## To run via kubernetes:
+# To run via kubernetes:
 
 - Clone project
 - Run `kubectl apply -f k8s`
